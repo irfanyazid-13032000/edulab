@@ -1,0 +1,36 @@
+CRITICAL - 2023-07-04 09:29:09 --> Invalid file: "tasks/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tasks/index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('tasks/index', [], true)
+ 3 APPPATH\Controllers\Tasks.php(15): view('tasks/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 09:33:54 --> Undefined variable $judul
+in APPPATH\Views\templates\header.php on line 12.
+ 1 APPPATH\Views\templates\header.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\laragon\\www\\edulab\\app\\Views\\templates\\header.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\edulab\\app\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Tasks.php(15): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 09:44:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Tasks.php on line 32.
+ 1 APPPATH\Controllers\Tasks.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\edulab\\app\\Controllers\\Tasks.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->datatable()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')
+CRITICAL - 2023-07-04 09:44:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Tasks.php on line 32.
+ 1 APPPATH\Controllers\Tasks.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\edulab\\app\\Controllers\\Tasks.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->datatable()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')
