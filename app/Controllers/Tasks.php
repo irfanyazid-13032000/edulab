@@ -44,6 +44,11 @@ class Tasks extends Controller
     
         $tasks = $builder->get()->getResultArray();
     
+        foreach ($tasks as &$task) {
+            $task['action'] = '<a href="' . base_url('delete-task/' . $task['id']) . '" class="btn btn-danger btn-sm">Delete</a>' .
+                              '<a href="' . base_url('/edit-task/' . $task['id']) . '" class="btn btn-primary btn-sm">Edit</a>';
+        }
+    
         $data = [
             "draw" => $draw,
             "recordsTotal" => $totalRecords,
@@ -54,12 +59,20 @@ class Tasks extends Controller
         return $this->response->setJSON($data);
     }
     
+    
 
 
 
     public function create()
     {
-        return view('tasks/create');
+        $data['judul'] = 'create tasks';
+
+        
+        echo view('templates/header',$data);
+        echo view('templates/sidebar');
+        echo view('templates/topbar');
+        echo view('tasks/create');
+        echo view('templates/footer');
     }
 
     public function store()
@@ -82,7 +95,15 @@ class Tasks extends Controller
 
         $data['task'] = $model->find($id);
 
-        return view('tasks/edit', $data);
+        $data['judul'] = 'edit tasks';
+
+        
+        echo view('templates/header',$data);
+        echo view('templates/sidebar');
+        echo view('templates/topbar');
+        echo view('tasks/edit',$data);
+        echo view('templates/footer');
+
     }
 
     public function update($id)

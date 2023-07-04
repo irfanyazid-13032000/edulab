@@ -12,8 +12,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item active">
+                <a class="nav-link" href="<?php echo base_url('/tasks') ?>">
                    
                     <span>Task</span></a>
             </li>

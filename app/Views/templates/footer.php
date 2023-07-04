@@ -65,10 +65,23 @@
         "columns": [
             { "data": "id" },
             { "data": "judul" },
-            { "data": "status" }
+            {
+                "data": "status",
+                "render": function(data, type, row) {
+                    if (data === "0") {
+                        return "Belum";
+                    } else if (data === "1") {
+                        return "Sudah";
+                    } else {
+                        return "";
+                    }
+                }
+            },
+            { "data": "action" }
         ]
     });
 });
+
 
 </script>
 

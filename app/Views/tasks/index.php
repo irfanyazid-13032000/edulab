@@ -9,6 +9,7 @@
             <th>ID</th>
             <th>Judul</th>
             <th>Status</th>
+            <th>action</th>
             
         </tr>
     </thead>
@@ -18,6 +19,8 @@
 
                 </div>
                 <!-- /.container-fluid -->
+
+                <a href="<?php echo base_url('create-task')?>" class="btn btn-primary">tambah data</a>
 
             </div>
             <!-- End of Main Content -->

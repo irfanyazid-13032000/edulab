@@ -31,7 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/tasks', 'Tasks::index');
+$routes->get('/create-task', 'Tasks::create');
+$routes->get('/delete-task/(:num)', 'Tasks::delete/$1');
+$routes->get('/edit-task/(:num)', 'Tasks::edit/$1');
 $routes->post('/tasks/datatable', 'Tasks::datatable');
+$routes->post('tasks/create', 'Tasks::store');
+
 
 
 /*
