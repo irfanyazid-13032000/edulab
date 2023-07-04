@@ -103,7 +103,6 @@ class Tasks extends Controller
         echo view('templates/topbar');
         echo view('tasks/edit',$data);
         echo view('templates/footer');
-
     }
 
     public function update($id)

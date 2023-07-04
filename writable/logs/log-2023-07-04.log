@@ -86,3 +86,64 @@ in APPPATH\Controllers\Tasks.php on line 63.
  4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')
+ERROR - 2023-07-04 20:31:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\edulab\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\edulab\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', 'iyacorp123', 'edulab', 3306, '', 0)
+#1 C:\laragon\www\edulab\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\edulab\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\edulab\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\edulab\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\edulab\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\edulab\app\Controllers\Tasks.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\edulab\system\CodeIgniter.php(932): App\Controllers\Tasks->index()
+#8 C:\laragon\www\edulab\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+#9 C:\laragon\www\edulab\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edulab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\edulab\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\edulab\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\edulab\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\edulab\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\edulab\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\edulab\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\edulab\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\edulab\app\Controllers\Tasks.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\edulab\system\CodeIgniter.php(932): App\Controllers\Tasks->index()
+#7 C:\laragon\www\edulab\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+#8 C:\laragon\www\edulab\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\edulab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\edulab\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-07-04 20:31:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tasks`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Tasks.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')
+CRITICAL - 2023-07-04 20:32:13 --> syntax error, unexpected token "return", expecting ";" or "{"
+in APPPATH\Controllers\Tasks.php on line 107.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\edulab\\app\\Controllers\\Tasks.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Tasks')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Tasks')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Tasks', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')
+CRITICAL - 2023-07-04 20:53:09 --> Too few arguments to function App\Controllers\Tasks::update(), 0 passed in C:\laragon\www\edulab\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Tasks.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tasks->update()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\edulab\\public\\index.php')

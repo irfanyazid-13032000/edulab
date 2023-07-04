@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Tasks');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,13 +29,14 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Tasks::index');
 $routes->get('/tasks', 'Tasks::index');
 $routes->get('/create-task', 'Tasks::create');
 $routes->get('/delete-task/(:num)', 'Tasks::delete/$1');
 $routes->get('/edit-task/(:num)', 'Tasks::edit/$1');
 $routes->post('/tasks/datatable', 'Tasks::datatable');
 $routes->post('tasks/create', 'Tasks::store');
+$routes->post('tasks/update/(:num)', 'Tasks::update/$1');
 
 
 
